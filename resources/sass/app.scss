@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap&subset=latin-ext');
+
+body{
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+}
+.container {
+    max-width: 100% !important;
+}
+
+/* NAV */
+#top {
+    background: #524d49 url('/gfx/top-bg.png') no-repeat top left;
+    height: 318px;
+}
+
+.nav-link {
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.first-link,
+.nav-link:hover {
+    color: #a30000;
+}
+
+.first-link:hover {
+    color: #fff;
+}
+
+/* ABOUT */
+#about {
+    height: 430px;
+}
+
+#logo {
+    background: url('/gfx/hex-logo.png') no-repeat center center;
+    background-size: contain;
+}
+
+#about-text {
+    background: url('/gfx/about-bg.png') no-repeat center left;
+    padding: 20px;
+}
+
+#about-text h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #a30000;
+}
+
+#about-text p{
+    font-weight: bold;
+    width: 50%;
+    text-align: justify;
+    margin-left: 50%;
+}
+
+/* SOCIAL */
+#social{
+    margin-top: 50px;
+}
+#social h2 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #a30000;
+}
+
+#fb{
+    background: url('/gfx/icons/facebook.png') no-repeat center center;
+    height: 300px;
+    cursor: pointer;
+}
+
+#ig{
+    background: url('/gfx/icons/instagram.png') no-repeat center center;
+    height: 300px;    
+    cursor: pointer;
+}
+
+#yt{
+    background: url('/gfx/icons/youtube.png') no-repeat center center;
+    height: 300px;    
+    cursor: pointer;
+}
+
+/* DRIVERS */
+#drivers{
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+#drivers h2{    
+    font-weight: bold;
+    font-size: 36px;
+    color: #a30000;
+}
+
+.driver{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #a30000;
+}
+.driver h3{
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.driver p{
+    margin-bottom: 0px;
+}
+
+/* SERIES */
+
+#series{
+    background: #5b5249 url('/gfx/league-bg.png')no-repeat top left;
+    height: 390px;    
+    padding: 20px;
+}
+
+#series h1{
+    font-weight: bold;
+    font-size: 36px;
+    color: #fff;
+    text-align: right;
+}
+
+ul#series-list{
+    list-style: none;
+    font-size: 28px;
+}
+
+#series-list li{
+    margin-bottom: 10px;
+}
+
+img.list-icon{
+    padding-right: 10px;
+}
+
+#series a{
+    color: #fff;
+}
+#series a:hover{
+    color: #fff;
+    text-decoration: none;
+    color: #a30000;
+}
+
+/* RESULTS */
+#results h1{
+    margin-top: 20px;
+    color: #a30000;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#results-list{
+    list-style: none;
+    margin-top: 10px;
+    font-size: 26px;
+    color: #524d49;
+    text-transform: uppercase;
+}
+
+#results-list span{
+    font-size: 32px;
+    color: #a30000;
+}
+
+@media(max-width: 1200px){
+    #top{
+        background-position-x: -185px;
+    }
+
+    #about-text p{
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+
+@media(max-width: 768px){
+    #top div{
+        background-color: rgba(0,0,0,0.8);
+        top: 0px;
+        position: absolute;
+    }
+
+    #logo{
+        margin: 10px 0px 10px 0px;
+        height: 180px;
+    }
+
+    #drivers{
+        margin-top: 40px;
+    }
+}
+
+@media(max-width: 480px){
+    .nav-link, .first-link{
+        font-size: 20px;
+        padding: .3rem .5rem;
+    }
+
+    #top{
+        background: url(/gfx/mobile/top_480.png) no-repeat center bottom;
+        height: 254px;
+    }
+
+    #social{
+        margin-top: 140px;
+    }
+
+    #fb, #yt, #ig{
+        height: 195px;
+    }
+
+   
+
+    .driver{
+        margin-top: 30px;
+    }
+
+    #about-text{
+        background: url('/gfx/mobile/about_480.png') no-repeat left bottom;
+    }
+
+    #series{
+        background: url('/gfx/mobile/series_480.png') no-repeat center top;
+        text-shadow: 1px 1px black;
+        height: 350px;
+    }
+    #series h2{
+        font-size: 1.5rem;
+    }
+    ul#series-list{
+        font-size: 22px;
+        padding-left: 10px;
+    }
+
+    #results-list{
+        font-size: 18px;
+    }
+    
+    #results-list span{
+        font-size: 24px;
+    }
+}
+//
