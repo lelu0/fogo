@@ -18,25 +18,26 @@
     
     <div class="container">
 
-        <div class="row" id="top">
-            <div class="col-md-4 offset-md-8 col-sm-12 align-self-center">
+        
+        <div class="row sticky" id="top">
+            <div class="col-md-10 offset-md-2 col-sm-12 align-self-center">
                 <ul class="nav">
                     <li class="nav-item">
-                      <a class="nav-link first-link" href="#top">HOME</a>
+                        <a class="nav-link first-link" href="#top">HOME</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#about">ABOUT US</a>
+                        <a class="nav-link" href="#about">ABOUT US</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#drivers">DRIVERS</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#series">SERIES</a>
-                    </li>
+                        <a class="nav-link" href="#drivers">DRIVERS</a>
+                    </li>                    
                     <li class="nav-item">
                         <a class="nav-link" href="#results">RESULTS</a>
-                      </li>
-                  </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="row" id="about">
@@ -50,6 +51,15 @@
                </p><p>                
                 We will currently participate in races on the Assetto Corsa platform.         
                 We would like to focus primarily on equal, good driving so that each of our next races will be a race that brought us great joy and satisfaction from a job well done.</p>
+            </div>
+        </div>
+        <div class="row" id="next-race">
+            <div class="col-md-4 offset-md-4 col-sm-12">
+                @if($next_race)
+                    <a href="{{ $next_race->link }}">Next race: <span>{{ $next_race->name }} - {{ $next_race->date }}</span></a>
+                @else
+                <a href="#">Next race: <span>NEXT RACE - --------------</span></a>
+                @endif
             </div>
         </div>
         <div class="row" id="social">
@@ -105,6 +115,14 @@
                     <li><span>{{ $result->race }}</span> {{ $result->result }}</li>
                 @endforeach
                 </ul>
+            </div>
+        </div>
+        <div class="row" id="contact">
+            <div class="col-md-12">
+                <h1>CONTACT</h1>
+                @foreach ($contacts as $contact )
+                    <p><span>{{ $contact->ident }}</span> {{ $contact->content }}</p>    
+                @endforeach                
             </div>
         </div>
     </div>
