@@ -75,25 +75,43 @@
             
         </div>
        
-        <div class="row" id="drivers">
+        <div class="row" id="drivers-text">
             <div class="col-md-1 offset-md-1 col-sm-12">
                 <h2>DRIVERS</h2>
             </div>
+        </div>
 
-            <div class="col-md-4 col-sm-12 driver">
-                <img src="gfx/hex-logo.png" class="img-fluid" />
-                <h3>Damian Borkowski</h3>
-                <p>Age: 28</p>
-                <p>Location: Wroclaw</p>                
+        
+        <div class="row" id="drivers">
+            @foreach($drivers as $driver)
+                @if($loop->iteration % 2 == 0)
+                <div class="col-md-4 col-sm-12 driver">
+                    @if($driver->image)
+                        <img src="/storage/{{ $driver->image }}" class="img-fluid" />
+                    @else
+                        <img src="gfx/hex-logo.png" class="img-fluid" />
+                    @endif
+                    <h3>{{ $driver->name }}</h3>
+                    <p>Age: {{ $driver->age }}</p>
+                    <p>Location: {{ $driver->city }}</p>    
+    
+                </div>
                 
-            </div>
-            <div class="col-md-4 col-sm-12 driver">
-                <img src="gfx/drv2.png" class="img-fluid" />
-                <h3>Kamil Paczos</h3>
-                <p>Age: 25</p>
-                <p>Location: Wroclaw</p>    
-
-            </div>
+                @else
+                <div class="col-md-4 offset-md-2 col-sm-12 driver">
+                    @if($driver->image)
+                        <img src="/storage/{{ $driver->image }}" class="img-fluid" />
+                    @else
+                        <img src="gfx/hex-logo.png" class="img-fluid" />
+                    @endif
+                    <h3>{{ $driver->name }}</h3>
+                    <p>Age: {{ $driver->age }}</p>
+                    <p>Location: {{ $driver->city }}</p>                
+                    
+                </div>
+                @endif
+            @endforeach            
+            
         </div>
         <div class="row" id="series">
             <div class="col-md-5 offset-md-7 col-sm-12">
@@ -123,6 +141,18 @@
                 @foreach ($contacts as $contact )
                     <p><span>{{ $contact->ident }}</span> {{ $contact->content }}</p>    
                 @endforeach                
+            </div>
+        </div>
+        <div class="row" id="partners-lead">
+            <div class="col-md-3 col-sm-12">
+                <h1>PARTNERS</h1>
+            </div>
+        </div>
+        <div class='row' id="partners">
+            <div class="col-md-12">
+                @foreach ($partners as $partner)
+                    <a href='{{ $partner->link }}' class="my-auto"><img class="partner" src="/storage/{{ $partner->image }}" /></a>
+                @endforeach
             </div>
         </div>
     </div>

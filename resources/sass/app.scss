@@ -1,32 +1,34 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap&subset=latin-ext');
 
-body{
+body {
     color: #fff;
     font-family: 'Bebas Neue', cursive;
 }
+
 .container {
     max-width: 100% !important;
 }
 
 /* NAV */
 #top {
-    background-color: rgba(0,0,0,0.95);
+    background-color: rgba(0, 0, 0, 0.95);
     top: 0px;
     overflow: hidden;
     z-index: 10;
 }
 
-@media(min-width: 768px){
+@media(min-width: 768px) {
     .sticky {
         position: fixed;
         top: 0;
         width: 100%;
-      }
+    }
 }
 
-.nav{
+.nav {
     float: right;
 }
+
 .nav-link {
     color: #fff;
     font-weight: bold;
@@ -65,129 +67,139 @@ body{
     color: #a30000;
 }
 
-#about-text p{
+#about-text p {
     font-weight: bold;
     width: 50%;
     text-align: justify;
     margin-left: 50%;
 }
+
 /* NEXT RACE */
-#next-race{
+#next-race {
     background: #000;
     padding: 15px;
     font-size: 26px;
     border-bottom: 5px #fff solid;
     text-align: center;
 }
-#next-race a{
+
+#next-race a {
     color: #a30000;
 }
 
-#next-race a span{
+#next-race a span {
     color: #fff;
 }
 
 /* SOCIAL */
-#social{
+#social {
     padding-top: 50px;
     background: #000 url('/gfx/socials-bg.png') no-repeat center top;
 }
+
 #social h2 {
     font-weight: bold;
     font-size: 36px;
     color: #a30000;
 }
 
-#fb{
+#fb {
     background: url('/gfx/icons/facebook.png') no-repeat center center;
     height: 300px;
     cursor: pointer;
 }
 
-#ig{
+#ig {
     background: url('/gfx/icons/instagram.png') no-repeat center center;
-    height: 300px;    
+    height: 300px;
     cursor: pointer;
 }
 
-#yt{
+#yt {
     background: url('/gfx/icons/youtube.png') no-repeat center center;
-    height: 300px;    
+    height: 300px;
     cursor: pointer;
 }
 
 /* DRIVERS */
-#drivers{
+#drivers-text {
     padding-top: 20px;
+}
+
+#drivers {
     margin-bottom: 20px;
 }
-#drivers h2{    
+
+#drivers h2,
+#drivers-text h2 {
     font-weight: bold;
     font-size: 36px;
     color: #a30000;
 }
 
-.driver{
+.driver {
     text-align: center;
     font-weight: bold;
     font-size: 20px;
     color: #a30000;
 }
-.driver h3{
+
+.driver h3 {
     font-size: 36px;
     margin-bottom: 5px;
 }
 
-.driver p{
+.driver p {
     margin-bottom: 0px;
 }
 
 /* SERIES */
 
-#series{
+#series {
     background: #000 url('/gfx/league-bg.png')no-repeat left top;
-    height: 390px;    
+    height: 390px;
     padding: 20px;
 }
 
-#series h1{
+#series h1 {
     font-weight: bold;
     font-size: 36px;
     color: #fff;
     text-align: right;
 }
 
-ul#series-list{
+ul#series-list {
     list-style: none;
     font-size: 28px;
 }
 
-#series-list li{
+#series-list li {
     margin-bottom: 10px;
 }
 
-img.list-icon{
+img.list-icon {
     padding-right: 10px;
 }
 
-#series a{
+#series a {
     color: #fff;
 }
-#series a:hover{
+
+#series a:hover {
     color: #fff;
     text-decoration: none;
     color: #a30000;
 }
 
 /* RESULTS */
-#results h1{
+#results h1 {
     margin-top: 20px;
     color: #a30000;
     font-weight: bold;
     font-size: 36px;
 }
 
-#results-list{
+#results-list {
     list-style: none;
     margin-top: 10px;
     font-size: 26px;
@@ -195,126 +207,172 @@ img.list-icon{
     text-transform: uppercase;
 }
 
-#results-list span{
+#results-list span {
     font-size: 32px;
     color: #a30000;
 }
 
 /* RESULTS */
 
-#contact{
+#contact {
     height: 390px;
     background: #000 url('/gfx/contact.png') no-repeat left top;
     padding: 20px;
 }
 
-#contact p{
+#contact p {
     color: #fff;
     text-align: center;
     font-size: 24px;
 }
 
-#contact p span{
+#contact p span {
     color: #a30000;
     font-size: 24px;
 }
 
+/* PARTNERS */
+#partners {
+
+    padding: 20px;
+    justify-content: center;
+}
+
+#partners>div {
+    justify-content: center;
+    display: flex;
+}
+
+.partner {
+    padding: 10px;
+    max-width: 150px;
+    max-height: 200px;
+}
+
+#partners-lead h1{
+    margin-top: 20px;
+    color: #a30000;
+    font-weight: bold;
+    font-size: 36px;
+    padding-left: 20px;
+}
 
 
-@media(max-width: 1200px){
-    #top{
+@media(max-width: 1200px) {
+    #top {
         background-position-x: -185px;
     }
 
-    #about-text p{
+    #about-text p {
         width: 100%;
         margin-left: 0%;
     }
 }
 
-@media(max-width: 768px){
-    #top div{
-        background-color: rgba(0,0,0,0.8);
+@media(max-width: 768px) {
+    #top div {
+        background-color: rgba(0, 0, 0, 0.8);
         top: 0px;
         position: absolute;
     }
 
-    #logo{
+    #logo {
         margin: 10px 0px 10px 0px;
         height: 180px;
     }
 
-    #drivers{
+    #drivers {
         margin-top: 40px;
     }
 
-    #social{
+    #social {
         background: #000;
     }
 
-    #about-text{
+    #about-text {
         border: none;
     }
 
-    #next-race{
-        padding-top:100px;
+    #next-race {
+        padding-top: 100px;
     }
 }
 
-@media(max-width: 480px){
-    .nav-link, .first-link{
+@media(max-width: 480px) {
+
+    .nav-link,
+    .first-link {
         font-size: 20px;
         padding: .3rem .5rem;
     }
 
-    #top{
+    #top {
         background: url(/gfx/mobile/top_480.png) no-repeat center bottom;
         height: 254px;
     }
 
-    #about{
+    #about {
         margin-top: 0px;
     }
 
-    #social{
+    #social {
         padding-top: 40px;
     }
 
-    #fb, #yt, #ig{
+    #fb,
+    #yt,
+    #ig {
         height: 195px;
     }
-  
 
-    .driver{
+
+    .driver {
         margin-top: 30px;
     }
 
-    #about-text{
+    #about-text {
         background: url('/gfx/mobile/about_480.png') no-repeat left bottom;
     }
 
-    #series{
-        background: url('/gfx/mobile/series_480.png') no-repeat center top;
+    #series {
+        background: #0c0f13 url('/gfx/mobile/series_480.png') no-repeat center top;
         text-shadow: 1px 1px black;
-        height: 350px;
+        min-height: 350px;
+        height: auto;
     }
-    #series h2{
+
+    #series h2 {
         font-size: 1.5rem;
     }
-    ul#series-list{
+
+    ul#series-list {
         font-size: 22px;
         padding-left: 10px;
     }
 
-    #results-list{
+    #results-list {
         font-size: 18px;
     }
-    
-    #results-list span{
+
+    #results-list span {
         font-size: 24px;
     }
 
-    #contact{
+    #contact {
         background: #000 url('/gfx/mobile/contact_480.png') no-repeat left top;
+    }
+
+    .partner {
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #partners>div {
+        display: block;
+    }
+
+    #partners>div>a {
+        margin: 0 auto;
     }
 }
