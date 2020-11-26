@@ -10,6 +10,7 @@ use Carbon\Carbon;
 use App\Contact;
 use App\Driver;
 use App\Partner;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -20,6 +21,7 @@ class HomeController extends Controller
         $contact = Contact::all();
         $drivers = Driver::where('active', 1)->get();
         $partners = Partner::where('active', 1)->get();
-        return view('welcome', array('results' => $results, 'leagues' => $leagues, 'next_race' => $nextRace, 'contacts' => $contact, 'drivers' => $drivers, 'partners' => $partners));
+        $files = Storage::files('public/gallery');
+        return view('welcome', array('results' => $results, 'leagues' => $leagues, 'next_race' => $nextRace, 'contacts' => $contact, 'drivers' => $drivers, 'partners' => $partners, 'files' => $files));
     }
 }

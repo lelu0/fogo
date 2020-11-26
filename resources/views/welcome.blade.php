@@ -37,10 +37,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">ABOUT US</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#drivers">DRIVERS</a>
-                    </li>                    
+                    </li>                   
                     <li class="nav-item">
                         <a class="nav-link" href="#results">RESULTS</a>
                     </li>
@@ -84,8 +81,14 @@
             </div>
             
         </div>
-       
-        <div class="row" id="drivers-text">
+       <div class='row' id="gallery">
+           @foreach ($files as $file)
+           <a href='storage/{{ ltrim($file, 'public/')  }}' target='_blank'>
+               <img src='storage/{{ ltrim($file, 'public/')  }}' class='gallery-img' />
+           </a>
+           @endforeach
+       </div>
+        <!--<div class="row" id="drivers-text">
             <div class="col-md-1 offset-md-1 col-sm-12">
                 <h2>DRIVERS</h2>
             </div>
@@ -122,7 +125,7 @@
                 @endif
             @endforeach            
             
-        </div>
+        </div>-->
         <div class="row" id="series">
             <div class="col-md-5 offset-md-7 col-sm-12">
                 <h1>SERIES</h1>
