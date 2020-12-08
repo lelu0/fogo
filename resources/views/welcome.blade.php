@@ -149,7 +149,7 @@
             </div>
         </div>
         <div class="row" id="contact">
-            <div class="col-md-12">
+            <div class="col-md-5 offset-md-7 col-sm-12">
                 <h1>CONTACT</h1>
                 @foreach ($contacts as $contact )
                     <p><span>{{ $contact->ident }}</span> {{ $contact->content }}</p>    
