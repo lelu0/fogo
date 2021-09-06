@@ -33,6 +33,9 @@
             <div class="col-md-10 offset-md-2 col-sm-12 align-self-center">
                 <ul class="nav">
                     <li class="nav-item">
+                        <a class="nav-link" href="https://paypal.me/pools/c/8CHbHV7tDu" target='_blank'><img src='/gfx/icons/paypal.png' height="20" class='mr-1'>DONATE</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link first-link" href="#top">HOME</a>
                     </li>
                     <li class="nav-item">
